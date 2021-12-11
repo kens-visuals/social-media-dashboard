@@ -1,5 +1,59 @@
 @use './base' as *;
 
+.heading {
+  &--primary {
+  }
+}
+
+.header {
+  &__label {
+  }
+
+  &__checkbox {
+  }
+}
+
+.text {
+  &--bold {
+    &-red {
+    }
+
+    &-green {
+    }
+  }
+
+  &--number {
+  }
+}
+
+.box {
+  &--facebook {
+  }
+
+  &--instagram {
+  }
+
+  &--twitter {
+  }
+
+  &--youtube {
+  }
+
+  &__username {
+  }
+
+  &__logo {
+  }
+
+  &__caption {
+    &-span {
+    }
+  }
+
+  &__wrapper {
+  }
+}
+
 .attribution {
   font-size: 1rem;
   text-align: center;
