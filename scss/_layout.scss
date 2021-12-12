@@ -1,21 +1,59 @@
+@use './mixins' as *;
+@use './variables' as *;
+
 .container {
+  width: 87%;
+  max-width: 110rem;
+
+  &--small {
+    padding: 5rem 0 10rem 0;
+    margin: 0 auto;
+
+    @media (min-width: 1140px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &--large {
+    margin: -5rem auto 5rem auto;
+  }
 }
 
 .wrapper {
   &--text {
+    margin-bottom: 2rem;
+
+    @media (min-width: 1140px) {
+      margin-bottom: 0;
+    }
   }
 
   &--toggle {
-  }
-}
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.main {
+    @media (min-width: 1140px) {
+      padding-top: 0;
+      justify-content: end;
+    }
+  }
 }
 
 .grid {
+  width: 100%;
+  display: grid;
+
   &--small {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.5rem;
   }
 
   &--large {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
   }
 }

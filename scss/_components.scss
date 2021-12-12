@@ -1,57 +1,156 @@
 @use './base' as *;
-
-.heading {
-  &--primary {
-  }
-}
+@use './variables' as *;
+@use './mixins' as *;
 
 .header {
-  &__label {
-  }
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 
   &__checkbox {
   }
 }
 
-.text {
-  &--bold {
-    &-red {
-    }
+.heading {
+  &--primary {
+    font-size: clamp(2.4rem, 2vw, 2.7rem);
+    margin-bottom: 0.5rem;
 
-    &-green {
+    @media (min-width: 1140px) {
+      margin-bottom: 0;
     }
   }
 
+  &--secondary {
+    margin: 5rem 0 2rem 0;
+  }
+}
+
+.text {
+  font-size: 1.4rem;
+
+  &--bold {
+    &-red,
+    &-green {
+      font-size: 1.2rem;
+      position: relative;
+
+      &::before {
+        width: 1rem;
+        position: absolute;
+        top: -0.25rem;
+        left: -1.25rem;
+      }
+    }
+
+    &-red {
+      color: $color-red;
+
+      &::before {
+        content: url('../images/icon-down.svg');
+      }
+    }
+
+    &-green {
+      color: $color-green;
+
+      &::before {
+        content: url('../images/icon-up.svg');
+      }
+    }
+  }
+
+  &--username {
+    font-size: 1.2rem;
+  }
+
   &--number {
+    font-size: 3rem;
   }
 }
 
 .box {
-  &--facebook {
+  border-radius: 0.5rem;
+  padding: 3rem;
+  gap: 2rem;
+  position: relative;
+
+  @include flex-center;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  &--instagram {
+  &--facebook {
+    &::before {
+      background-color: $color-facebook;
+    }
   }
 
   &--twitter {
+    &::before {
+      background-color: $color-twitter;
+    }
+  }
+
+  &--instagram {
+    &::before {
+      background-image: $color-instagram;
+    }
   }
 
   &--youtube {
+    &::before {
+      background-color: $color-youtube;
+    }
+  }
+
+  &--small {
+    padding: 3rem 2.5rem 2rem 2.5rem;
   }
 
   &__username {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__logo {
   }
 
   &__caption {
+    font-size: 5.2rem;
+
+    @include flex-center;
+
     &-span {
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
     }
   }
 
   &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+}
+
+.light-mode {
+  @include light-mode;
+}
+
+.dark-mode {
+  @include dark-mode;
 }
 
 .attribution {
@@ -63,7 +162,6 @@
   &__link:visited {
     text-transform: uppercase;
     // color: $color-primary--light;
-    transition: all 0.3s;
   }
 
   &__link:hover,

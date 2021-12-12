@@ -1,15 +1,15 @@
 $theme-light-bg: hsl(0, 0%, 100%); // (BG)
-$theme-light-bg--card: hsl(227, 47%, 96%); // (Card BG)
-$theme-light-bg--pattern: hsl(225, 100%, 98%); // (Top BG Pattern)
+$theme-light-bg--card: hsl(225, 100%, 98%); // (Card BG)
+$theme-light-bg--pattern: hsl(227, 47%, 96%); // (Top BG Pattern)
 $theme-light-text: hsl(228, 12%, 44%); // (Text)
 $theme-light-text--darker: hsl(230, 17%, 14%); // (Text)
 $theme-light-toggle: hsl(230, 22%, 74%);
 
 $theme-dark-bg: hsl(230, 17%, 14%); // (BG)
-$theme-dark-bg--card: hsl(232, 19%, 15%); // (Card BG)
-$theme-dark-bg--pattern: hsl(229, 27%, 20%); // (Top BG Pattern)
+$theme-dark-bg--card: hsl(229, 27%, 20%); // (Card BG)
+$theme-dark-bg--pattern: hsl(232, 19%, 15%); // (Top BG Pattern)
 $theme-dark-text: hsl(228, 34%, 66%); // (Text)
-$theme-dark-text--darker: hsl(0, 0%, 100%); // (Text)
+$theme-dark-text--lighter: hsl(0, 0%, 100%); // (Text)
 $theme-dark-toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
 $color-red: hsl(356, 69%, 56%);
@@ -17,4 +17,8 @@ $color-green: hsl(163, 72%, 41%);
 $color-youtube: hsl(348, 97%, 39%);
 $color-twitter: hsl(203, 89%, 53%);
 $color-facebook: hsl(208, 92%, 53%);
-$color-instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$color-instagram: linear-gradient(
+  to right,
+  hsl(37, 97%, 70%),
+  hsl(329, 70%, 58%)
+);

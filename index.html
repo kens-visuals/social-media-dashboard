@@ -18,18 +18,20 @@
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+    <script defer src="js/script.js"></script>
+
     <title>Frontend Mentor | Social Media Dashboard</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container container--small">
         <div class="wrapper wrapper--text">
           <h1 class="heading heading--primary">Social Media Dashboard</h1>
           <p class="text text--bold">Total Followers: 23,004</p>
         </div>
 
         <div class="wrapper wrapper--toggle">
-          <label for="monthly" class="header__label">Dark Mode</label>
+          <label for="monthly" class="text text--bold">Dark Mode</label>
           <input
             type="checkbox"
             id="monthly"
@@ -37,248 +39,216 @@
             class="header__checkbox js-checkbox"
           />
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main class="main">
-        <div class="grid grid--small">
-          <figure class="box box--facebook">
-            <div class="box__username">
-              <img
-                src="./images/icon-facebook.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
+    <main class="container container--large">
+      <div class="grid grid--small">
+        <figure class="box box--facebook">
+          <div class="box__username">
+            <img
+              src="./images/icon-facebook.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+            <p class="text text--username">@nathanf</p>
+          </div>
 
-              <p class="text text--bold">@nathanf</p>
-            </div>
+          <figcaption class="box__caption text text--number">
+            1987
+            <span class="box__caption-span">Followers</span>
+          </figcaption>
 
-            <figcaption class="box__caption">
-              1987
-              <span class="box__caption-span">Followers</span>
-            </figcaption>
+          <p class="text text--bold-green">12 Today</p>
+        </figure>
 
-            <p class="text text--bold-green">12 Today</p>
-          </figure>
+        <figure class="box box--twitter">
+          <div class="box__username">
+            <img
+              src="./images/icon-twitter.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
 
-          <figure class="box box--twitter">
-            <div class="box__username">
-              <img
-                src="./images/icon-twitter.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
+            <p class="text text--username">@nathanf</p>
+          </div>
 
-              <p class="text text--bold">@nathanf</p>
-            </div>
+          <figcaption class="box__caption text text--number">
+            1044
+            <span class="box__caption-span">Followers</span>
+          </figcaption>
 
-            <figcaption class="box__caption">
-              1044
-              <span class="box__caption-span">Followers</span>
-            </figcaption>
+          <p class="text text--bold-green">99 Today</p>
+        </figure>
 
-            <p class="text text--bold-green">99 Today</p>
-          </figure>
+        <figure class="box box--instagram">
+          <div class="box__username">
+            <img
+              src="./images/icon-instagram.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
 
-          <figure class="box box--instagram">
-            <div class="box__username">
-              <img
-                src="./images/icon-instagram.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
+            <p class="text text--username">@realnathanf</p>
+          </div>
 
-              <p class="text text--bold">@realnathanf</p>
-            </div>
+          <figcaption class="box__caption text text--number">
+            11k
+            <span class="box__caption-span">Followers</span>
+          </figcaption>
 
-            <figcaption class="box__caption">
-              11k
-              <span class="box__caption-span">Followers</span>
-            </figcaption>
+          <p class="text text--bold-green">1099 Today</p>
+        </figure>
 
-            <p class="text text--bold-green">1099 Today</p>
-          </figure>
+        <figure class="box box--youtube">
+          <div class="box__username">
+            <img
+              src="./images/icon-youtube.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
 
-          <figure class="box box--youtube">
-            <div class="box__username">
-              <img
-                src="./images/icon-youtube.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
+            <p class="text text--username">Nathan F.</p>
+          </div>
 
-              <p class="text text--bold">Nathan F.</p>
-            </div>
+          <figcaption class="box__caption text text--number">
+            8239
+            <span class="box__caption-span">Subscribers</span>
+          </figcaption>
 
-            <figcaption class="box__caption">
-              8239
-              <span class="box__caption-span">Subscribers</span>
-            </figcaption>
+          <p class="text text--bold-red">144 Today</p>
+        </figure>
+      </div>
 
-            <p class="text text--bold-red">144 Today</p>
-          </figure>
-        </div>
+      <h2 class="heading heading--secondary">Overview - Today</h2>
 
-        <h2 class="heading heading--secondary">Overview - Today</h2>
-
-        <div class="grid grid--large">
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Page Views</p>
-
-              <img
-                src="./images/icon-facebook.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">87</p>
-
-              <p class="text text--bold-green">3%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Page Views</p>
-
-              <img
-                src="./images/icon-facebook.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">52</p>
-
-              <p class="text text--bold-red">2%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Likes</p>
-
-              <img
-                src="./images/icon-instagram.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">5462</p>
-
-              <p class="text text--bold-green">2257%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Profile Views</p>
-
-              <img
-                src="./images/icon-instagram.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">52k</p>
-
-              <p class="text text--bold-green">1375%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Retweets</p>
-
-              <img
-                src="./images/icon-twitter.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">117</p>
-
-              <p class="text text--bold-green">303%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Likes</p>
-
-              <img
-                src="./images/icon-twitter.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">507</p>
-
-              <p class="text text--bold-green">553%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Likes</p>
-
-              <img
-                src="./images/icon-youtube.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">107</p>
-
-              <p class="text text--bold-green">19%</p>
-            </div>
-          </figure>
-
-          <figure class="box">
-            <figcaption class="box__wrapper">
-              <p class="text text--bold">Total Views</p>
-
-              <img
-                src="./images/icon-youtube.svg"
-                alt=""
-                aria-hidden="true"
-                class="box__logo"
-              />
-            </figcaption>
-
-            <div class="box__wrapper">
-              <p class="text text--number">1407</p>
-
-              <p class="text text--bold-green">12%</p>
-            </div>
-          </figure>
-        </div>
-      </main>
-    </div>
+      <div class="grid grid--large">
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Page Views</p>
+            <img
+              src="./images/icon-facebook.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">87</p>
+            <p class="text text--bold-green">3%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Likes</p>
+            <img
+              src="./images/icon-facebook.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">52</p>
+            <p class="text text--bold-red">2%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Likes</p>
+            <img
+              src="./images/icon-instagram.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">5462</p>
+            <p class="text text--bold-green">2257%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Profile Views</p>
+            <img
+              src="./images/icon-instagram.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">52k</p>
+            <p class="text text--bold-green">1375%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Retweets</p>
+            <img
+              src="./images/icon-twitter.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">117</p>
+            <p class="text text--bold-green">303%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Likes</p>
+            <img
+              src="./images/icon-twitter.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">507</p>
+            <p class="text text--bold-green">553%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Likes</p>
+            <img
+              src="./images/icon-youtube.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">107</p>
+            <p class="text text--bold-green">19%</p>
+          </div>
+        </figure>
+        <figure class="box box--small">
+          <figcaption class="box__wrapper">
+            <p class="text text--bold">Total Views</p>
+            <img
+              src="./images/icon-youtube.svg"
+              alt=""
+              aria-hidden="true"
+              class="box__logo"
+            />
+          </figcaption>
+          <div class="box__wrapper">
+            <p class="text text--number">1407</p>
+            <p class="text text--bold-green">12%</p>
+          </div>
+        </figure>
+      </div>
+    </main>
 
     <footer class="attribution">
       Challenge by

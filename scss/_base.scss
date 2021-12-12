@@ -1,9 +1,13 @@
+@use './mixins' as *;
+@use './variables' as *;
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: all 0.3s;
 }
 
 img,
@@ -41,8 +45,12 @@ html {
 
 body {
   min-height: 100vh;
+  color: $theme-light-text;
+  background-color: $theme-light-bg;
   font-size: 1.6rem;
+  font-weight: 700;
   font-family: 'Inter', sans-serif;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }

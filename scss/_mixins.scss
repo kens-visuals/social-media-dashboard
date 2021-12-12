@@ -1,0 +1,86 @@
+@use './variables' as *;
+
+@mixin light-mode {
+  color: $theme-light-text;
+  background-color: $theme-light-bg;
+
+  .header {
+    background-color: $theme-light-bg--pattern;
+  }
+
+  .heading {
+    color: $theme-light-text--darker;
+  }
+
+  .text {
+    &--number {
+      color: $theme-dark-bg;
+    }
+  }
+
+  .wrapper {
+    &--toggle {
+      border-top: 0.1rem solid rgba($theme-light-text, 0.5);
+
+      @media (min-width: 1140px) {
+        border: none;
+      }
+    }
+  }
+
+  .box {
+    background-color: $theme-light-bg--card;
+
+    &__caption {
+      &-span {
+        color: rgba($theme-light-text, 0.8);
+      }
+    }
+  }
+}
+
+@mixin dark-mode {
+  color: $theme-dark-text;
+  background-color: $theme-dark-bg;
+
+  .header {
+    background-color: $theme-dark-bg--pattern;
+  }
+
+  .heading {
+    color: $theme-dark-text--lighter;
+  }
+
+  .text {
+    &--number {
+      color: $theme-light-bg;
+    }
+  }
+
+  .wrapper {
+    &--toggle {
+      border-top: 0.1rem solid rgba($theme-dark-text, 0.5);
+
+      @media (min-width: 1140px) {
+        border: none;
+      }
+    }
+  }
+
+  .box {
+    background-color: $theme-dark-bg--card;
+
+    &__caption {
+      &-span {
+        color: rgba($theme-dark-text, 0.8);
+      }
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
