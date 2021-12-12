@@ -48,7 +48,47 @@ body {
   font-family: "Inter", sans-serif;
   text-rendering: optimizeSpeed;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
+  color: #8b97c6;
+  background-color: #1e202a;
+}
+body .header {
+  background-color: #1f212e;
+}
+body .header__checkbox {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+body .header__checkbox-span::before {
+  background-color: #1f212e;
+}
+body .heading {
+  color: white;
+}
+body .text--number {
+  color: white;
+}
+body .wrapper--toggle {
+  border-top: 0.1rem solid rgba(139, 151, 198, 0.5);
+}
+@media (min-width: 810px) {
+  body .wrapper--toggle {
+    border: none;
+  }
+}
+body .box {
+  background-color: #252a41;
+}
+body .box:hover {
+  background-color: #333a57;
+}
+body .box__caption-span {
+  color: rgba(139, 151, 198, 0.8);
+}
+body .attribution__link:link, body .attribution__link:visited {
+  color: white;
+}
+body .attribution__link:hover, body .attribution__link:active {
+  color: #8b97c6;
 }
 
 .container {
