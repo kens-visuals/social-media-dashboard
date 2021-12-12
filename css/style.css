@@ -56,10 +56,10 @@ body {
   max-width: 110rem;
 }
 .container--small {
-  padding: 5rem 0 10rem 0;
+  padding: 10rem 0 15rem 0;
   margin: 0 auto;
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .container--small {
     display: flex;
     align-items: center;
@@ -67,13 +67,13 @@ body {
   }
 }
 .container--large {
-  margin: -5rem auto 5rem auto;
+  margin: -10rem auto 5rem auto;
 }
 
 .wrapper--text {
   margin-bottom: 2rem;
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .wrapper--text {
     margin-bottom: 0;
   }
@@ -84,35 +84,67 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .wrapper--toggle {
     padding-top: 0;
     justify-content: end;
+    gap: 1.5rem;
   }
 }
 
 .grid {
   width: 100%;
   display: grid;
-}
-.grid--small {
+  gap: 2.8rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2.5rem;
-}
-.grid--large {
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2rem;
 }
 
 .header {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+.header__label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.header__checkbox {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.header__checkbox-span {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  transition: 0.3s;
+  border-radius: 4rem;
+}
+.header__checkbox-span::before {
+  content: "";
+  display: inline-block;
+  width: 1.8rem;
+  aspect-ratio: 1;
+  background-color: #1f212e;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0.3rem;
+  transform: translateY(-50%);
+}
+.header__checkbox-span.is-checked::before {
+  transform: translate(-2.5rem, -50%);
+}
+
 .heading--primary {
   font-size: clamp(2.4rem, 2vw, 2.7rem);
   margin-bottom: 0.5rem;
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .heading--primary {
     margin-bottom: 0;
   }
@@ -173,6 +205,9 @@ body {
   top: 0;
   left: 0;
 }
+.box:hover {
+  cursor: pointer;
+}
 .box--facebook::before {
   background-color: #198ff5;
 }
@@ -213,11 +248,26 @@ body {
   justify-content: space-between;
 }
 
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-block: 2rem;
+}
+.attribution__link {
+  text-transform: uppercase;
+}
+
 .light-mode {
   color: #63687e;
   background-color: white;
 }
 .light-mode .header {
+  background-color: #f0f2fa;
+}
+.light-mode .header__checkbox {
+  background-image: linear-gradient(to right, #aeb3cb, #aeb3cb);
+}
+.light-mode .header__checkbox-span::before {
   background-color: #f0f2fa;
 }
 .light-mode .heading {
@@ -229,7 +279,7 @@ body {
 .light-mode .wrapper--toggle {
   border-top: 0.1rem solid rgba(99, 104, 126, 0.5);
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .light-mode .wrapper--toggle {
     border: none;
   }
@@ -237,8 +287,17 @@ body {
 .light-mode .box {
   background-color: #f5f7ff;
 }
+.light-mode .box:hover {
+  background-color: #e0e2f0;
+}
 .light-mode .box__caption-span {
   color: rgba(99, 104, 126, 0.8);
+}
+.light-mode .attribution__link:link, .light-mode .attribution__link:visited {
+  color: #1e202a;
+}
+.light-mode .attribution__link:hover, .light-mode .attribution__link:active {
+  color: #63687e;
 }
 
 .dark-mode {
@@ -246,6 +305,12 @@ body {
   background-color: #1e202a;
 }
 .dark-mode .header {
+  background-color: #1f212e;
+}
+.dark-mode .header__checkbox {
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+.dark-mode .header__checkbox-span::before {
   background-color: #1f212e;
 }
 .dark-mode .heading {
@@ -257,7 +322,7 @@ body {
 .dark-mode .wrapper--toggle {
   border-top: 0.1rem solid rgba(139, 151, 198, 0.5);
 }
-@media (min-width: 1140px) {
+@media (min-width: 810px) {
   .dark-mode .wrapper--toggle {
     border: none;
   }
@@ -265,17 +330,17 @@ body {
 .dark-mode .box {
   background-color: #252a41;
 }
+.dark-mode .box:hover {
+  background-color: #333a57;
+}
 .dark-mode .box__caption-span {
   color: rgba(139, 151, 198, 0.8);
 }
-
-.attribution {
-  font-size: 1rem;
-  text-align: center;
-  margin-block: 2rem;
+.dark-mode .attribution__link:link, .dark-mode .attribution__link:visited {
+  color: white;
 }
-.attribution__link:link, .attribution__link:visited {
-  text-transform: uppercase;
+.dark-mode .attribution__link:hover, .dark-mode .attribution__link:active {
+  color: #8b97c6;
 }
 
 /*# sourceMappingURL=style.css.map */

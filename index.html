@@ -31,19 +31,22 @@
         </div>
 
         <div class="wrapper wrapper--toggle">
-          <label for="monthly" class="text text--bold">Dark Mode</label>
-          <input
-            type="checkbox"
-            id="monthly"
-            name="monthly"
-            class="header__checkbox js-checkbox"
-          />
+          <label for="monthly" class="header__label text text--bold">
+            Dark Mode
+            <input
+              type="checkbox"
+              id="monthly"
+              name="monthly"
+              class="header__checkbox js-checkbox"
+            />
+            <span class="header__checkbox-span js-checkbox-span"></span>
+          </label>
         </div>
       </div>
     </header>
 
     <main class="container container--large">
-      <div class="grid grid--small">
+      <div class="grid">
         <figure class="box box--facebook">
           <div class="box__username">
             <img
@@ -126,7 +129,7 @@
 
       <h2 class="heading heading--secondary">Overview - Today</h2>
 
-      <div class="grid grid--large">
+      <div class="grid">
         <figure class="box box--small">
           <figcaption class="box__wrapper">
             <p class="text text--bold">Page Views</p>

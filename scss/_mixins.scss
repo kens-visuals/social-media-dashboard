@@ -6,35 +6,55 @@
 
   .header {
     background-color: $theme-light-bg--pattern;
+
+    &__checkbox {
+      background-image: $theme-light-toggle;
+
+      &-span::before {
+        background-color: $theme-light-bg--pattern;
+      }
+    }
   }
 
   .heading {
     color: $theme-light-text--darker;
   }
 
-  .text {
-    &--number {
-      color: $theme-dark-bg;
-    }
+  .text--number {
+    color: $theme-dark-bg;
   }
 
-  .wrapper {
-    &--toggle {
-      border-top: 0.1rem solid rgba($theme-light-text, 0.5);
+  .wrapper--toggle {
+    border-top: 0.1rem solid rgba($theme-light-text, 0.5);
 
-      @media (min-width: 1140px) {
-        border: none;
-      }
+    @media (min-width: 810px) {
+      border: none;
     }
   }
 
   .box {
     background-color: $theme-light-bg--card;
 
+    &:hover {
+      background-color: $theme-light-bg--hover;
+    }
+
     &__caption {
       &-span {
         color: rgba($theme-light-text, 0.8);
       }
+    }
+  }
+
+  .attribution {
+    &__link:link,
+    &__link:visited {
+      color: $theme-light-text--darker;
+    }
+
+    &__link:hover,
+    &__link:active {
+      color: $theme-light-text;
     }
   }
 }
@@ -45,35 +65,53 @@
 
   .header {
     background-color: $theme-dark-bg--pattern;
+
+    &__checkbox {
+      background-image: $theme-dark-toggle;
+
+      &-span::before {
+        background-color: $theme-dark-bg--pattern;
+      }
+    }
   }
 
   .heading {
     color: $theme-dark-text--lighter;
   }
 
-  .text {
-    &--number {
-      color: $theme-light-bg;
-    }
+  .text--number {
+    color: $theme-dark-text--lighter;
   }
 
-  .wrapper {
-    &--toggle {
-      border-top: 0.1rem solid rgba($theme-dark-text, 0.5);
+  .wrapper--toggle {
+    border-top: 0.1rem solid rgba($theme-dark-text, 0.5);
 
-      @media (min-width: 1140px) {
-        border: none;
-      }
+    @media (min-width: 810px) {
+      border: none;
     }
   }
 
   .box {
     background-color: $theme-dark-bg--card;
 
-    &__caption {
-      &-span {
-        color: rgba($theme-dark-text, 0.8);
-      }
+    &:hover {
+      background-color: $theme-dark-bg--hover;
+    }
+
+    &__caption-span {
+      color: rgba($theme-dark-text, 0.8);
+    }
+  }
+
+  .attribution {
+    &__link:link,
+    &__link:visited {
+      color: $theme-dark-text--lighter;
+    }
+
+    &__link:hover,
+    &__link:active {
+      color: $theme-dark-text;
     }
   }
 }

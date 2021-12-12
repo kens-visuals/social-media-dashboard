@@ -6,7 +6,47 @@
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+
   &__checkbox {
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &-span {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      transition: 0.3s;
+      border-radius: 4rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        background-color: $theme-dark-bg--pattern;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 0.3rem;
+        transform: translateY(-50%);
+      }
+
+      &.is-checked {
+        &::before {
+          transform: translate(-2.5rem, -50%);
+        }
+      }
+    }
   }
 }
 
@@ -15,7 +55,7 @@
     font-size: clamp(2.4rem, 2vw, 2.7rem);
     margin-bottom: 0.5rem;
 
-    @media (min-width: 1140px) {
+    @media (min-width: 810px) {
       margin-bottom: 0;
     }
   }
@@ -87,6 +127,10 @@
     left: 0;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &--facebook {
     &::before {
       background-color: $color-facebook;
@@ -121,9 +165,6 @@
     gap: 1rem;
   }
 
-  &__logo {
-  }
-
   &__caption {
     font-size: 5.2rem;
 
@@ -145,27 +186,20 @@
   }
 }
 
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-block: 2rem;
+
+  &__link {
+    text-transform: uppercase;
+  }
+}
+
 .light-mode {
   @include light-mode;
 }
 
 .dark-mode {
   @include dark-mode;
-}
-
-.attribution {
-  font-size: 1rem;
-  text-align: center;
-  margin-block: 2rem;
-
-  &__link:link,
-  &__link:visited {
-    text-transform: uppercase;
-    // color: $color-primary--light;
-  }
-
-  &__link:hover,
-  &__link:active {
-    // color: $color-secondary;
-  }
 }
