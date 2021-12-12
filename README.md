@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://kens-visuals.github.io/social-media-dashboard/](https://kens-visuals.github.io/social-media-dashboard/)
-- Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Solution URL: [https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-built-with-vanilla-js-VHewUlX1Y](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-built-with-vanilla-js-VHewUlX1Y)
 
 ## My process
 
