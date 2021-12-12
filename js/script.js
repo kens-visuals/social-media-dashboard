@@ -12,7 +12,7 @@ const addDarkMode = () => {
 
 const addLightMode = () => {
   checkboxSpan.classList.add('is-checked');
-  checkbox.setAttribute('checked', false);
+  checkbox.removeAttribute('checked');
   body.classList.remove('dark-mode');
   body.classList.add('light-mode');
 };
