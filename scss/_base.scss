@@ -53,6 +53,4 @@ body {
   text-rendering: optimizeSpeed;
   display: grid;
   grid-template-rows: auto 1fr auto;
-
-  @include dark-mode;
 }

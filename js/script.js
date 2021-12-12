@@ -24,5 +24,5 @@ const checkPreference = () =>
   preferenceQuery.matches && window.matchMedia ? addDarkMode() : addLightMode();
 
 checkbox.addEventListener('click', toggleTheme);
-// preferenceQuery.addEventListener('change', checkPreference);
-// window.addEventListener('DOMContentLoaded', checkPreference);
+preferenceQuery.addEventListener('change', checkPreference);
+window.addEventListener('DOMContentLoaded', checkPreference);
