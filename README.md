@@ -1,6 +1,6 @@
-# Frontend Mentor - PROJECT NAME Solution
+# Frontend Mentor - Social Media Dashboard with Theme Switcher Solution
 
-This is a solution to the [PROJECT NAME Challenge on Frontend Mentor](PROJECT LINK).
+This is a solution to the [Social Media Dashboard with Theme Switcher Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H).
 
 ## Table of contents
 
@@ -21,8 +21,10 @@ This is a solution to the [PROJECT NAME Challenge on Frontend Mentor](PROJECT LI
 
 Users should be able to:
 
-- OBJECTIVE_1
-- OBJECTIVE_2
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Toggle color theme to their preference
+- BONUS: Detect user's prefrences and switch to the correct theme accordingly
 
 ### Screenshot
 
@@ -30,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Live Site URL: [https://kens-visuals.github.io/social-media-dashboard/](https://kens-visuals.github.io/social-media-dashboard/)
 - Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
 
 ## My process
@@ -39,40 +41,23 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - SCSS custom properties
+- SCSS mixins
 - CSS Flexbox
 - CSS Grid
+- Vanilla JS
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+I learned a lot of new and awesome stuff, and I'm really pumped about how this project came out. At first, I was wandering around the Internet to find an article, a video, something that will help to help me to build this project with SCSS and its features. However, if you've done a similar project, you know that most of the tutorials out there suggest using CSS variables. I didn't want to use that technique, since it would make my code pretty messy and mixed up with two technologies, CSS and SASS. So, I kept searching, and I ran across a couple of articles, which were really helpful, but they were lacking a couple of details. Finally, after hours of testing and reading, I came up with my own way of accomplishing this concept. I used SASS, `mixins` and I've got to admit that this came out to be a lot easier than I anticipated it to be. Although it took a several hours and bunch of small projects in CodePen to test things out before coding the actual project, but it was all worth it.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'm planning on writing an article in a more detailed manner, to better explain this technique and how it could potentially make adding a theme to your existing website or creating a one from scratch a lot easier.
 
 ### Useful resources
 
-- [TO_BE_UPDATED]() - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [TO_BE_UPDATED]() - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [animista](https://animista.net/) - This time, instead of adding custom animations, I went for a well known `animista` for help.
 
 ## Author
 

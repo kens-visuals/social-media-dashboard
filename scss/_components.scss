@@ -1,6 +1,6 @@
 @use './base' as *;
-@use './variables' as *;
 @use './mixins' as *;
+@use './variables' as *;
 
 .header {
   border-bottom-left-radius: 1rem;
@@ -51,6 +51,8 @@
 }
 
 .heading {
+  animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
   &--primary {
     font-size: clamp(2.4rem, 2vw, 2.7rem);
     margin-bottom: 0.5rem;
@@ -67,6 +69,7 @@
 
 .text {
   font-size: 1.4rem;
+  animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 
   &--bold {
     &-red,
@@ -113,8 +116,15 @@
   padding: 3rem;
   gap: 2rem;
   position: relative;
+  animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.4s both,
+    fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   @include flex-center;
+
+  & > * {
+    animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.6s
+      both;
+  }
 
   &::before {
     content: '';
@@ -180,9 +190,8 @@
 
   &__wrapper {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    @include flex-space-between;
   }
 }
 
@@ -190,6 +199,7 @@
   font-size: 1rem;
   text-align: center;
   margin-block: 2rem;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.3s both;
 
   &__link {
     text-transform: uppercase;
@@ -202,4 +212,26 @@
 
 .dark-mode {
   @include dark-mode;
+}
+
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
